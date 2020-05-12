@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change password
+{% endblock %}
+
+{% block main %}
+  <form action="{{ url_for('changepass') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="OldPass" placeholder="Old password" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="newPass" placeholder="New password" type="password"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="passCon" placeholder="Confirm new password" type="password"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Change</button>
+            </div>
+        </fieldset>
+
+    </form>
+
+{% endblock %}

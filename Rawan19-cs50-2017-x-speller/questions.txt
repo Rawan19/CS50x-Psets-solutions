@@ -1,0 +1,21 @@
+0.  It is the longest word in the English language, a lung disease caused by inhaling silica dust
+1.  gets resourse usage, used to examine the resource usage of a process
+2.  16
+3.  TODO
+4.  after checking for correct number of args & errors, and storing the text file name in a variable, it opens that file, using fopen.
+    in the first for loop: it starts iterating through each letter, using fgetc, which returns the unsigned char cast to an int, or EOF on end of file
+    , and everytime, it stores theASCII value of the letter in a variable"c", checking if it's alpha, by sending it to isalpha() function, which returns true if the parameter is of type char,
+    or  an int that represents an ASCII value for a char .
+    let's say our file has :(cat is in her room), we're reading the first letter"c", the first condition is true, so now: word[0]='c', and index=1.
+    when i=1:word[1]='a', and index=2. when i=2:word[2]='t', and index=3. next character to be read: is a white space, so none of the conditions will
+    return true, except for the last one, which indicates that we must have found a whole word, terminates current word, updates words counter ,
+    sends the word to check() to see if it's misspelled, then prepares for next word by setting index = 0.
+
+    what about the remaining consitions? well,1)if (index > LENGTH) makes sure to ignore alphabetical strings with a length that ecxeeds the LENGTH of the longest word.
+    2)else if (isdigit(c)): ignore words with numbers
+
+
+
+5.  because we want to read characters only, if we used fscanf,we'll end up reading "*","!", quotes...etc
+   besides, fscanf reads the file, line by line, so instead of reading a line, dividing it into words, we use fgetc, to get each word
+6.  TODO

@@ -1,0 +1,35 @@
+{%extends "layout.html"%}
+
+{% block title %}
+    Summary
+{% endblock %}
+
+{% block main %}
+    <table style="width :80%">
+        <tr>
+            <th>Stock</th>
+            <th>Number of shares</th>
+            <th>price per stock</th>
+            <th> total price</th>
+            <th>When</th>
+            <th>Bought/sold</th>
+        </tr>
+
+            {%for stock in stocks%}
+
+                  <tr>
+
+                    <td>{{stock.stockSymbol}}</td>
+                    <td>{{stock.howMany}}</td>
+                    <td>{{stock.price}}</td>
+                    <td>{{stock.totalPrice}}</td>
+                    <td>{{stock.when}}</td>
+                    <td>{{stock.BS}}</td>
+
+
+                   </tr>
+
+            {% endfor %}
+
+    </table>
+{% endblock %}

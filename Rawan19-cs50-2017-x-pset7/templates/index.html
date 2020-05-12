@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+ <table style="width:80%">
+     <tr>
+         <th>Current Cash</th>
+     </tr>
+
+     <tr>
+         <td>{{current}}</td>
+     </tr>
+ </table>
+
+ <br>
+
+
+   <table style="width:50%">
+       <tr>
+           <th> stock </th>
+           <th> shares</th>
+           <th> price per stock</th>
+           <th> total price</th>
+           <th>Total grand</th>
+       </tr>
+
+
+           {% for stock in stocks %}
+             <tr>
+                 <td>{{stock.stockSymbol}}</td>
+                 <td>{{stock.sum1}}</td>
+                 <td>{{stock.price}}</td>
+                 <td>{{stock.sum2}}</td>
+
+             </tr>
+
+            {% endfor %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{grand}}</td>
+
+
+   </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    You can do it!
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('index') }}" method="post">
+        <div>
+            <div class=project>
+                <div class="vertical">
+                    <img src="static/angry.png" width="300">
+                    <input autocomplete="off" autofocus class="form-control" name="angry" placeholder="عصبي"type="text"/>
+
+                </div>
+            </div>
+
+             <div class=project>
+                <div class="vertical">
+                    <img src="static/happy.jpg" width="300" >
+                    <input autocomplete="off" autofocus class="form-control" name="happy" placeholder="فرحان" type="text"/>
+                </div >
+            </div>
+
+
+            <div class=project>
+                <div class="vertical">
+                    <img src="static/hung.jpg" width="300" >
+                    <input autocomplete="off" autofocus class="form-control" name="hung" placeholder ="جعان" type="text"/>
+                </div >
+            </div>
+
+
+            <div class=project>
+                <div class="vertical">
+                    <img src="static/love.gif" width="300">
+                    <input autocomplete="off" autofocus class="form-control" name="love"  placeholder="محب" type="text"/>
+                </div >
+            </div>
+
+            <div class=project>
+                <div class="vertical">
+                    <img src="static/scared.jpg" width="300">
+                    <input autocomplete="off" autofocus class="form-control" name="scared"  placeholder="خايف" type="text"/>
+                </div >
+            </div>
+
+            <div class=project>
+                <div class="vertical">
+                    <img src="static/thirst.jpg" width="300">
+                    <input autocomplete="off" autofocus class="form-control" name="thirst" placeholder="عطشان" type="text"/>
+                </div >
+
+            </div>
+
+            <div>
+                <button type="submit" >
+                    <img src="static/click.png" width="160" height="100" alt="submit">
+
+                </button>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </form>
+{% endblock %}

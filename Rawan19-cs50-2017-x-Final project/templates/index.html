@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Score
+{% endblock %}
+
+{% block main %}
+
+
+ <br>
+
+   <div>
+       <div class="project">
+           <table style="width:50%">
+           <tr>
+               <th> Animals</th>
+               <th> Adjectives</th>
+               <th>date</th>
+           </tr>
+
+
+               {% for s in score %}
+                 <tr>
+                     <td>{{s.Animals}}/6</td>
+                     <td> {{s.Adjectives}}/6 </td>
+
+                     <td>{{s.when}}</td>
+
+                 </tr>
+
+                {% endfor %}
+
+
+       </table>
+       </div>
+       <div>
+           <img src="static/sponge.jpg"  width="250" hight="250">
+       </div>
+
+   </div>
+
+
+
+{% endblock %}
