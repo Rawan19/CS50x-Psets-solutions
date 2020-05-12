@@ -1,4 +1,7 @@
+* A "mashup" is a web app that combines data or functionality from multiple sources. In this here mashup, you’ll combine data from Google News with functionality from Google Maps! *
+
 Readme for GeoNames Postal Code files :
+
 
 allCountries.zip: all countries, for the UK only the outwards codes, the UK total codes are in GB_full.csv.zip 
 GB_full.csv.zip the full codes for the UK, ca 1.7 mio rows
